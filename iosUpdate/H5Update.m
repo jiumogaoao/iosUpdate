@@ -49,6 +49,7 @@
         
         NSString* l_zipfile = [NSString stringWithFormat:@"%@/%@",dcoumentpath,fileName];
         NSString* unzipto = [dcoumentpath stringByAppendingString:folderName] ;
+        NSLog(@"%@", unzipto);
         if( [zip UnzipOpenFile:l_zipfile] ) {
             BOOL ret = [zip UnzipFileTo:unzipto overWrite:YES];
             if( NO==ret ) {
